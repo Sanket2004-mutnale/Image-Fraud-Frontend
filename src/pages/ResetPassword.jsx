@@ -46,7 +46,7 @@ function ResetPassword() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8080/api/auth/reset-password",
+        "https://image-fraud-detection-production.up.railway.app/api/auth/reset-password",
         {
           token: token,
           newPassword: password

@@ -28,7 +28,7 @@ function Register() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8080/api/auth/register",
+        "https://image-fraud-detection-production.up.railway.app/api/auth/register",
         {
           name: name,
           email: email,

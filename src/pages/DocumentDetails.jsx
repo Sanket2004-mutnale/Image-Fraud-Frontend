@@ -42,29 +42,27 @@ function DocumentDetails() {
         // =========================
 
         const documentResponse = await axios.get(
-          `http://localhost:8080/api/documents/${id}`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`
-            }
-          }
-        );
-
+  `https://image-fraud-detection-production.up.railway.app/api/documents/${id}`,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }
+);
         setDocument(documentResponse.data);
 
         // =========================
         // 2. GET ANALYSIS
         // =========================
 
-        const analysisResponse = await axios.get(
-          `http://localhost:8080/api/documents/${id}/analysis`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`
-            }
-          }
-        );
-
+       const analysisResponse = await axios.get(
+  `https://image-fraud-detection-production.up.railway.app/api/documents/${id}/analysis`,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }
+);
         setAnalysis(analysisResponse.data);
 
       } catch (err) {
@@ -132,7 +130,7 @@ function DocumentDetails() {
 
       // DELETE API
       await axios.delete(
-        `http://localhost:8080/api/documents/${id}`,
+        `https://image-fraud-detection-production.up.railway.app/api/documents/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`

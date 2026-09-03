@@ -25,7 +25,7 @@ function ForgotPassword() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:8080/api/auth/forgot-password",
+        "https://image-fraud-detection-production.up.railway.app/api/auth/forgot-password",
         {
           email: email
         }
